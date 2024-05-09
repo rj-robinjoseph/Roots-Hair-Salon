@@ -4,16 +4,16 @@ const Page = () => (
     <nav className="w-full h-24 bg-white flex justify-between items-center">
       <img src="/logo-w.png" alt="#" className="mx-8 w-[250px] h-[48px] mt-2" />
       <div className="w-[500px] flex flex-column justify-between items-center mx-16">
-        <a href="#about" className="underline decoration-red-200">
+        <a href="#about" className="text-amber-900 font-black">
           Home
         </a>
-        <a href="#services" className="">
+        <a href="#services" className="font-bold hover:text-amber-900">
           Services
         </a>
-        <a href="#aboutUs" className="">
+        <a href="#aboutUs" className="font-bold hover:text-amber-900">
           About Us
         </a>
-        <a href="#contact" className="">
+        <a href="#contact" className="font-bold hover:text-amber-900">
           Contact Us
         </a>
         <a
@@ -87,16 +87,16 @@ const Page = () => (
         src="/flowers.png"
         className="absolute top-[-30px] object-cover z-30"
       />
-      <div className=" w-full h-auto z-50">
+      <div className="relative w-full h-auto z-50">
         <h2 className="lg-heading font-customFont2 font-bold text-[40px] pt-14 pb-8 text-center">
           Our Services
         </h2>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-28">
-          <div className="text-center">
+          <div className="text-center relative">
             <h1 className="text-2xl font-semibold text-gray-800">
               Explore Your Natural Beauty Spa Services
             </h1>
-            <button className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded z-30">
+            <button className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded z-50">
               Get Pricing
             </button>
           </div>
@@ -307,7 +307,7 @@ const Page = () => (
           className="absolute top-[-40px] left-0 object-cover z-50"
         />
         <div className="flex-1 flex flex-col justify-center items-center bg-block3 text-white px-8">
-          <div>
+          <div className=" relative z-50">
             <h2 className="lg-heading font-customFont2 font-bold text-[40px] pb-8">
               About Us
             </h2>
@@ -315,9 +315,14 @@ const Page = () => (
               Welcome to the Roots Salon & Spa,
             </h1>
             <p className="text-xl mb-5">a luxurious day</p>
-            <button className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow">
-              Spa Services
-            </button>
+            <div>
+              <button className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow z-50 mr-5">
+                Salon Services
+              </button>
+              <button className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow z-50">
+                Spa Services
+              </button>
+            </div>
           </div>
         </div>
         <div className="flex-1 flex flex-col justify-center bg-block3 p-8 relative">
@@ -441,8 +446,7 @@ const Page = () => (
                 </li>
                 <li>
                   <a
-                    href="https://maps.app.goo.gl/h8SzjciLKzwjnbDS6
-"
+                    href="https://maps.app.goo.gl/h8SzjciLKzwjnbDS6"
                     className="hover:underline"
                   >
                     Location
@@ -457,8 +461,7 @@ const Page = () => (
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://www.facebook.com/RootsSalonThunderBay/
-                    "
+                    href="https://www.facebook.com/RootsSalonThunderBay/"
                     className="hover:underline "
                   >
                     Facebook
@@ -466,8 +469,7 @@ const Page = () => (
                 </li>
                 <li>
                   <a
-                    href="https://www.facebook.com/RootsSalonThunderBay/
-                    "
+                    href="https://www.facebook.com/RootsSalonThunderBay/"
                     className="hover:underline"
                   >
                     Instagram
