@@ -1,7 +1,3 @@
-import Image from "next/image";
-import { Footer, Navbar } from "../components";
-import { Block1, Block2, Block3, Block4 } from "../sections";
-
 const Page = () => (
   <>
     {/* Navbar */}
@@ -242,7 +238,7 @@ const Page = () => (
             </div>
             <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
               <img
-                src="icon3.png"
+                src="/icon3.png"
                 alt="Corrective Color / Transformation"
                 className="mx-auto h-12 w-12"
               />
