@@ -4,21 +4,21 @@ const Page = () => (
     <nav className="w-full h-24 bg-white flex justify-between items-center">
       <img src="/logo-w.png" alt="#" className="mx-8 w-[250px] h-[48px] mt-2" />
       <div className="w-[500px] flex flex-column justify-between items-center mx-16">
-        <a href="#about" className="text-amber-900 font-black">
+        <a href="#about" className="text-btnHover font-black">
           Home
         </a>
-        <a href="#services" className="font-bold hover:text-amber-900">
+        <a href="#services" className="font-bold hover:text-btnHover">
           Services
         </a>
-        <a href="#aboutUs" className="font-bold hover:text-amber-900">
+        <a href="#aboutUs" className="font-bold hover:text-btnHover">
           About Us
         </a>
-        <a href="#contact" className="font-bold hover:text-amber-900">
+        <a href="#contact" className="font-bold hover:text-btnHover">
           Contact Us
         </a>
         <a
           href="tel:+8075776696"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className=" bg-btnHover hover:bg-btnNormal text-white hover:text-gray-600 font-bold py-2 px-4 rounded"
         >
           Call to Book
         </a>
@@ -27,13 +27,13 @@ const Page = () => (
 
     {/* Block 1 */}
     <section id="home">
-      <div className="w-full h-auto bg-hero-bg1 bg-cover bg-no-repeat relative">
+      <div className="w-full h-auto bg-hero-bg2 bg-cover bg-no-repeat relative">
         <div className="overlay absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-10 cursor-pointer z-10"></div>
         <img
           src="/bgStyle.png"
           className="absolute top-0 left-0 object-cover z-50"
         />
-        <div className="flex flex-col items-center pt-20">
+        <div className="flex flex-col items-center pt-20 relative z-50">
           <h1 className="sm-heading font-customFont2 text-[35px] mt-24 z-20 text-white drop-shadow-2xl">
             We`re waiting for you!
           </h1>
@@ -43,12 +43,12 @@ const Page = () => (
         </div>
 
         <div className="cta flex flex-row justify-center pb-48">
-          <button className="bg-gray-300 hover:bg-blue-700  text-black hover:text-white font-bold py-2 px-4 mx-4 rounded z-50">
+          <a
+            className="bg-custom2 hover:bg-custom3 text-black  font-bold py-2 px-4 mx-4 rounded z-50"
+            href="#services"
+          >
             See Our Services
-          </button>
-          <button className="bg-gray-300 hover:bg-blue-700 text-black hover:text-white font-bold py-2 px-4 mx-4 rounded z-50">
-            Our Story
-          </button>
+          </a>
         </div>
       </div>
       <div className=" w-full h-[500px] bg-white flex justify-between object-fill relative">
@@ -58,11 +58,11 @@ const Page = () => (
           className=" w-auto h-full absolute left-[130px] z-30"
           alt=""
         />
-        <div className=" w-[850px] h-[400px] bg-white absolute top-1/3 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 rounded-xl flex flex-col items-center z-10">
-          <h2 className="lg-heading font-customFont2 font-bold text-[40px] pt-4 pb-8 text-center mt-20">
+        <div className=" w-[850px] h-[400px] bg-white absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 rounded-xl flex flex-col items-center z-10">
+          <h2 className="lg-heading font-customFont2 font-bold text-[40px] pb-8 text-center mt-5">
             Welcome to <br></br> Roots Saloon and Spa
           </h2>
-          <span className="text-center text-[20px] text-pink-400 font-semibold">
+          <span className="text-center text-[20px] text-custom4 font-semibold">
             Take time for yourself
           </span>
           <p className="text-center text-[16px] text-black px-32 z-30 mt-8">
@@ -85,130 +85,34 @@ const Page = () => (
     <main id="services" className="bg-block-bg bg-cover bg-no-repeat relative">
       <img
         src="/flowers.png"
-        className="absolute top-[-30px] object-cover z-30"
+        className="absolute top-[-30px] object-cover z-0"
       />
-      <div className="relative w-full h-auto z-50">
-        <h2 className="lg-heading font-customFont2 font-bold text-[40px] pt-14 pb-8 text-center">
-          Our Services
-        </h2>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-28">
-          <div className="text-center relative">
-            <h1 className="text-2xl font-semibold text-gray-800">
-              Explore Your Natural Beauty Spa Services
-            </h1>
-            <button className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded z-50">
-              Get Pricing
-            </button>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center">
-              <img
-                src="/icon1.png"
-                alt="Classic Pedicure"
-                className="mx-auto h-12 w-12"
-              />
-              <h2 className="mt-4 font-semibold text-lg text-gray-800">
-                Classic Pedicure
-              </h2>
-              <p className="mt-2 text-gray-600">
-                A relaxing treatment that includes soaking, nail shaping,
-                cuticle care, exfoliation, massage, and polish application for
-                well-groomed feet.
-              </p>
-            </div>
-            <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center">
-              <img
-                src="/icon2.png"
-                alt="Gel Manicure"
-                className="mx-auto h-12 w-12"
-              />
-              <h2 className="mt-4 font-semibold text-lg text-gray-800">
-                Gel Manicure
-              </h2>
-              <p className="mt-2 text-gray-600">
-                Delivers a long-lasting, durable polish application that
-                maintains a high-gloss finish, requiring no drying time and
-                lasting for weeks.
-              </p>
-            </div>
-            <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center">
-              <img
-                src="/icon3.png"
-                alt="Hybrid Lash Extensions"
-                className="mx-auto h-12 w-12"
-              />
-              <h2 className="mt-4 font-semibold text-lg text-gray-800">
-                Hybrid Lash Extensions
-              </h2>
-              <p className="mt-2 text-gray-600">
-                A blend of volume and classic techniques, these lash extensions
-                provide a fuller, more textured look while maintaining natural
-                beauty.
-              </p>
-            </div>
-            <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center">
-              <img
-                src="/icon4.png"
-                alt="Eyelash Tint"
-                className="mx-auto h-12 w-12"
-              />
-              <h2 className="mt-4 font-semibold text-lg text-gray-800">
-                Eyelash Tint
-              </h2>
-              <p className="mt-2 text-gray-600">
-                A semi-permanent dye is applied to enhance the color, shape, and
-                thickness of the lashes, creating a fuller, more dramatic look
-                without makeup.
-              </p>
-            </div>
-            <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center">
-              <img
-                src="/icon5.png"
-                alt="Eyebrow Waxing and Threading"
-                className="mx-auto h-12 w-12"
-              />
-              <h2 className="mt-4 font-semibold text-lg text-gray-800">
-                Eyebrow Waxing and Threading
-              </h2>
-              <p className="mt-2 text-gray-600">
-                This service shapes and defines the eyebrows through either
-                waxing or threading, providing precise control over hair removal
-                for a clean look.
-              </p>
-            </div>
-            <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center">
-              <img
-                src="/icon1.png"
-                alt="String Hair Wraps"
-                className="mx-auto h-12 w-12"
-              />
-              <h2 className="mt-4 font-semibold text-lg text-gray-800">
-                String Hair Wraps
-              </h2>
-              <p className="mt-2 text-gray-600">
-                This is a specific treatment to exfoliate and deep cleanse
-                problematic skin in the back area.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr className="border-gray-200 px-56" />
-      {/* Block 2 Section 2*/}
-      <div className=" w-full h-auto pb-60 relative">
-        <img src="/flowers2.png" className="absolute bottom-0 object-cover" />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
+      <div className=" w-full h-auto pb-52 relative">
+        <img
+          src="/flowers2.png"
+          className="absolute bottom-0 object-cover z-0"
+        />
+        <div
+          className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8 relative z-50"
+          id="saloon-services"
+        >
+          <h2 className="lg-heading font-customFont2 font-bold text-[40px] pt-14 pb-8 text-center">
+            Our Services
+          </h2>
           <div className="text-center">
-            <h1 className="text-2xl font-semibold text-gray-800">
+            <h1 className="text-2xl font-semibold text-gray-800 mb-8">
               Explore Our Salon Services
             </h1>
-            <button className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a
+              className="bg-btnHover hover:bg-btnNormal text-white font-bold py-2 px-4 rounded z-50"
+              href="/priceList.pdf"
+              target="_blank"
+            >
               Get Pricing
-            </button>
+            </a>
           </div>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
+            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center h-[340px]">
               <img
                 src="icon1.png"
                 alt="Haircut"
@@ -222,7 +126,7 @@ const Page = () => (
                 and preferences, ranging from classic cuts to modern styles.
               </p>
             </div>
-            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
+            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center h-[340px]">
               <img
                 src="icon2.png"
                 alt="Regrowth Retouch"
@@ -236,7 +140,7 @@ const Page = () => (
                 uniform color and flawless blend with previously dyed hair.
               </p>
             </div>
-            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
+            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center h-[340px]">
               <img
                 src="/icon3.png"
                 alt="Corrective Color / Transformation"
@@ -251,7 +155,7 @@ const Page = () => (
                 desired result.
               </p>
             </div>
-            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
+            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center h-[340px]">
               <img
                 src="icon4.png"
                 alt="Blowouts"
@@ -265,7 +169,7 @@ const Page = () => (
                 blowout that adds volume and shine to your hair.
               </p>
             </div>
-            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
+            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center h-[340px]">
               <img
                 src="icon5.png"
                 alt="Vivid and Specialty Colors"
@@ -280,7 +184,7 @@ const Page = () => (
                 hairstyle.
               </p>
             </div>
-            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center">
+            <div className="bg-block2s2 p-11 shadow-sm rounded-lg text-center h-[340px]">
               <img
                 src="icon1.png"
                 alt="String Hair Wraps"
@@ -296,18 +200,133 @@ const Page = () => (
             </div>
           </div>
         </div>
+        <hr className="border-gray-200 px-56 mt-8 mb-8" id="spa-services" />
+        <div className="relative w-full h-auto z-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-28">
+            <div className="text-center relative">
+              <h1 className="text-2xl font-semibold text-gray-800 mb-8">
+                Explore Our Natural Beauty Spa Services
+              </h1>
+              <a
+                className="bg-btnHover hover:bg-btnNormal text-white font-bold py-2 px-4 rounded z-50"
+                href="/priceList.pdf"
+                target="_blank"
+              >
+                Get Pricing
+              </a>
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center h-[340px]">
+                <img
+                  src="/icon1.png"
+                  alt="Classic Pedicure"
+                  className="mx-auto h-12 w-12"
+                />
+                <h2 className="mt-4 font-semibold text-lg text-gray-800">
+                  Classic Pedicure
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  A relaxing treatment that includes soaking, nail shaping,
+                  cuticle care, exfoliation, massage, and polish application for
+                  well-groomed feet.
+                </p>
+              </div>
+              <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center h-[340px]">
+                <img
+                  src="/icon2.png"
+                  alt="Gel Manicure"
+                  className="mx-auto h-12 w-12"
+                />
+                <h2 className="mt-4 font-semibold text-lg text-gray-800">
+                  Gel Manicure
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  Delivers a long-lasting, durable polish application that
+                  maintains a high-gloss finish, requiring no drying time and
+                  lasting for weeks.
+                </p>
+              </div>
+              <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center h-[340px]">
+                <img
+                  src="/icon3.png"
+                  alt="Hybrid Lash Extensions"
+                  className="mx-auto h-12 w-12"
+                />
+                <h2 className="mt-4 font-semibold text-lg text-gray-800">
+                  Hybrid Lash Extensions
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  A blend of volume and classic techniques, these lash
+                  extensions provide a fuller, more textured look while
+                  maintaining natural beauty.
+                </p>
+              </div>
+              <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center h-[340px]">
+                <img
+                  src="/icon4.png"
+                  alt="Eyelash Tint"
+                  className="mx-auto h-12 w-12"
+                />
+                <h2 className="mt-4 font-semibold text-lg text-gray-800">
+                  Eyelash Tint
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  A semi-permanent dye is applied to enhance the color, shape,
+                  and thickness of the lashes, creating a fuller, more dramatic
+                  look without makeup.
+                </p>
+              </div>
+              <div className="bg-block2s1 p-11 shadow-sm rounded-lg text-center h-[340px]">
+                <img
+                  src="/icon5.png"
+                  alt="Eyebrow Waxing and Threading"
+                  className="mx-auto h-12 w-12"
+                />
+                <h2 className="mt-4 font-semibold text-lg text-gray-800">
+                  Eyebrow Waxing and Threading
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  This service shapes and defines the eyebrows through either
+                  waxing or threading, providing precise control over hair
+                  removal for a clean look.
+                </p>
+              </div>
+              <div className="bg-custom4 p-11 shadow-sm rounded-lg text-center h-[340px]">
+                <img
+                  src="/phone.png"
+                  alt="String Hair Wraps"
+                  className="mx-auto h-12 w-12"
+                />
+                <h2 className="mt-4 font-semibold text-lg text-white">
+                  Need more details?
+                </h2>
+                <p className="mt-2 text-gray-100 mb-10">
+                  Reach out to us for any inquiries or assistance. We`re here to
+                  help!
+                </p>
+                <a
+                  href="tel:+8075776696"
+                  className="bg-btnHover hover:bg-btnNormal text-white font-bold py-2 px-4 rounded"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
     {/* Block 3*/}
-    <section id="aboutUs" className="">
-      <div className="flex h-[440px] relative">
-        <img
-          src="/bgStyle2.png"
-          className="absolute top-[-40px] left-0 object-cover z-50"
-        />
-        <div className="flex-1 flex flex-col justify-center items-center bg-block3 text-white px-8">
-          <div className=" relative z-50">
+    <section id="aboutUs" className="relative">
+      <div className="flex h-[440px]">
+        <div className="flex-1 flex flex-col justify-center items-center bg-block3 text-white px-8 select-text">
+          <img
+            src="/bgStyle2.png"
+            className="absolute top-[-40px] left-0 object-cover z-40"
+          />
+          <div className="relative z-50">
             <h2 className="lg-heading font-customFont2 font-bold text-[40px] pb-8">
               About Us
             </h2>
@@ -316,29 +335,37 @@ const Page = () => (
             </h1>
             <p className="text-xl mb-5">a luxurious day</p>
             <div>
-              <button className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow z-50 mr-5">
+              <a
+                href="#saloon-services"
+                className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow z-50 mr-5"
+              >
                 Salon Services
-              </button>
-              <button className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow z-50">
+              </a>
+              <a
+                href="#spa-services"
+                className="bg-white text-purple-800 font-semibold py-2 px-4 rounded shadow z-50"
+              >
                 Spa Services
-              </button>
+              </a>
             </div>
           </div>
         </div>
         <div className="flex-1 flex flex-col justify-center bg-block3 p-8 relative">
           <div className="p-10 py-24 bg-pink-200 rounded-lg shadow-lg absolute top-[-100px] right-[200px]">
-            <h2 className="text-2xl text-block3 font-bold mb-4">Visit Us</h2>
-            <div className="mb-6">
-              <h3 className="font-semibold mb-2">Hours</h3>
-              <p>Monday: 10:30am-3pm</p>
-              <p>Tuesday-Saturday: 9am-5pm</p>
-              <p>Closed on Sundays for the season</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Find Us</h3>
-              <p>142 Centennial Square, Thunder Bay, ON P7E 1H3</p>
-              <p>Tel: +1 (807) 577-6696</p>
-              <p>Email: rootssalon@tbaytel.net</p>
+            <div className="relative z-50">
+              <h2 className="text-2xl text-block3 font-bold mb-4">Visit Us</h2>
+              <div className="mb-6">
+                <h3 className="font-semibold mb-2">Hours</h3>
+                <p>Monday: 10:30am-3pm</p>
+                <p>Tuesday-Saturday: 9am-5pm</p>
+                <p>Closed on Sundays for the season</p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Find Us</h3>
+                <p>142 Centennial Square, Thunder Bay, ON P7E 1H3</p>
+                <p>Tel: +1 (807) 577-6696</p>
+                <p>Email: rootssalon@tbaytel.net</p>
+              </div>
             </div>
           </div>
         </div>
@@ -347,7 +374,7 @@ const Page = () => (
 
     {/* Block 4*/}
     <section id="contact" className="bg-white">
-      <div className="py-32 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <div className="py-32 lg:py-16 px-4 mx-auto max-w-screen-md relative z-50">
         <h2 className="mb-4 font-bold text-[40px] tracking-tight font-customFont2 text-center text-gray-900">
           Contact Us
         </h2>
@@ -402,7 +429,7 @@ const Page = () => (
           </div>
           <button
             type="submit"
-            className="py-3 px-5 bg-blue-500 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+            className="py-3 px-5 bg-btnHover hover:bg-btnNormal text-sm font-medium text-center text-white hover:text-gray-800 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
           >
             Send message
           </button>
@@ -418,7 +445,7 @@ const Page = () => (
           <div className="mb-6 md:mb-0">
             <a href="#home" className="flex items-center">
               <img
-                src="/logo-w.png"
+                src="/logo-footer.png"
                 className="h-8 me-3 mb-6"
                 alt="Roots Logo"
               />
